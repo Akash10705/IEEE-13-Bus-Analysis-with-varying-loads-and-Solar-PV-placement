@@ -7,6 +7,9 @@ This work involves the analysis with
 # Introduction:
 In a existing IEEE 13 Bus unbalanced system introduction of varying loads with suitable capacitor compensation is done to understand whether the IEEE 13 bus is suitable and how it becomes stable after addition of loads which replicates the behaviour of the feeder connected in the rural areas which has unbalanced load distribution due to the presence of two phase induction motors and multiple single-phase pumps which consumes unequal power, Also during the seasons when more power is needed for the domestication and agricultrual purposes,their would be increased usage of such loads,this process is being   analyzed with openDSS with additional loads and capacitor in IEEE 13 bus distribution system.
 
+# Technical Abstract
+> The study uses four phases: **Base Profiling** sets benchmark power flow; **Load Perturbation** tests grid resilience; **PV Integration** reduces losses via active injection ($P_{\text{PV}}$); and **PV-BESS Optimization** uses battery storage and reactive support to maintain voltages within ANSI C84.1 limits.
+
 # Key words used:
 1. Open-Source Distribution System Simulator
 2. Additional loads
@@ -18,13 +21,6 @@ In a existing IEEE 13 Bus unbalanced system introduction of varying loads with s
 
 ## Overview & System Evolution
 This research framework evaluates distribution grid resilience, voltage profile enhancement, and loss mitigation across four progressive operational scenarios on the IEEE 13-node test feeder.
-
----
-
-
-# 4-Stage Distribution System Methodology
-
-Evaluates grid resilience, voltage profiles, and loss mitigation on the IEEE 13-node test feeder across four scenarios.
 
 ---
 
@@ -56,11 +52,6 @@ $$\text{Load } (P_L + jQ_L) \xrightarrow{\text{Alter}} (P_L' + jQ_L') \xrightarr
 
 ---
 
-### 4. Descriptions
-
-#### Technical Abstract
-> The study uses four phases: **Base Profiling** sets benchmark power flow; **Load Perturbation** tests grid resilience; **PV Integration** reduces losses via active injection ($P_{\text{PV}}$); and **PV-BESS Optimization** uses battery storage and reactive support to maintain voltages within ANSI C84.1 limits.
-
 #### Presentation Highlights
 * **Phase 1: Baseline** — Benchmarking $I^2R$ line losses and nodal voltage drops under standard conditions.
 * **Phase 2: Stress Testing** — Analyzing system vulnerability during extreme demand variations.
@@ -70,4 +61,22 @@ $$\text{Load } (P_L + jQ_L) \xrightarrow{\text{Alter}} (P_L' + jQ_L') \xrightarr
 * **Phase 3: Targeted PV Generation** — Optimal allocation and sizing of solar units to offset active line power flows ($P \cdot R$).
 * **Phase 4: Coordinated PV-BESS Dispatch** — Deploying energy storage for active power balancing and smart-inverter voltage stabilization.
 
-```
+---
+
+# Nodal Voltage & Voltage Improvement Comparison Analysis
+
+| Bus / Node ID | Case 1: Base Case (p.u.) | Case 2: PV Only (p.u.) | Case 3: PV + BESS (p.u.) | Total Voltage Improvement (%) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Bus 650 (Substation)** | 1.0000 | 1.0000 | 1.0000 | 0.00% |
+| **Bus 632** | 0.9821 | 0.9915 | 0.9968 | +1.50% |
+| **Bus 670** | 0.9712 | 0.9854 | 0.9931 | +2.25% |
+| **Bus 671** | 0.9650 | 0.9820 | 0.9910 | +2.69% |
+| **Bus 680** | 0.9648 | 0.9818 | 0.9908 | +2.70% |
+| **Bus 633** | 0.9785 | 0.9890 | 0.9945 | +1.64% |
+| **Bus 634** | 0.9701 | 0.9835 | 0.9912 | +2.18% |
+| **Bus 645** | 0.9760 | 0.9875 | 0.9938 | +1.82% |
+| **Bus 646** | 0.9715 | 0.9842 | 0.9918 | +2.09% |
+| **Bus 675 (Target Bus)** | 0.9482 | 0.9751 | 0.9882 | +4.22% |
+| **Bus 692** | 0.9645 | 0.9815 | 0.9905 | +2.70% |
+| **Bus 611** | 0.9620 | 0.9798 | 0.9892 | +2.83% |
+| **Bus 652** | 0.9810 | 0.9908 | 0.9962 | +1.55% |
