@@ -1,4 +1,0 @@
-Name, RegControl, Tap, Min, Max, Step, Position, Winding, Direction, CogenMode
-reg1, reg1 ,  1.09375,  0.90000,  1.10000,  0.00625, 15, 2, Forward, False
-reg2, reg2 ,  1.05625,  0.90000,  1.10000,  0.00625, 9, 2, Forward, False
-reg3, reg3 ,  1.09375,  0.90000,  1.10000,  0.00625, 15, 2, Forward, False
